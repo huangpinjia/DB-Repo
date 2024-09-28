@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Employee List</title></head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>country</th>
+            <th>position</th>
+            <th>wage</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.country }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.wage }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
