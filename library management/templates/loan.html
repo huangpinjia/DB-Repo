@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Loan Management</title>
+    <style>
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loan Management</h1>
+
+    <!-- 新增借閱記錄表單 -->
+    <form action="{{ url_for('add_loan') }}" method="POST">
+        <input type="number" name="reader_id" placeholder="Reader ID" required>
+        <input type="number" name="book_id" placeholder="Book ID" required>
+        <input type="date" name="loan_date" required>
+        <input type="date" name="return_date" required>
+        <button type="submit">Add Loan</button>
+    </form>
+
+    <h2>Loan Records</h2>
+    <table border="1">
+        <tr>
+            <th>LoanID</th>
+            <th>Reader</th>
+            <th>Book</th>
+            <th>Loan Date</th>
+            <th>Return Date</th>
+            <th>Actions</th>
+        </tr>
+        {% for loan in loans %}
+        <tr>
+            <td>{{ loan.LoanID }}</td>
+            <td>{{ loan.ReaderName }}</td>
+            <td>{{ loan.BookTitle }}</td>
+            <td>
+                <form action="{{ url_for('update_loan', loan_id=loan.LoanID) }}" method="POST">
+                    <input type="date" name="loan_date" value="{{ loan.LoanDate }}" required>
+            </td>
+            <td>
+                    <input type="date" name="return_date" value="{{ loan.ReturnDate }}" required>
+            </td>
+        
+            <td>
+                    <button type="submit">Update</button>
+                </form>
+                <!-- 刪除按鈕 -->
+                <form action="{{ url_for('delete_loan', loan_id=loan.LoanID) }}" method="GET" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
