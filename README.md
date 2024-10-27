@@ -12,4 +12,4 @@
 -  [video](https://youtu.be/rnTgi4VpvG8"前後端連結測試")
 ### HW2：
 -  [Code](https://github.com/huangpinjia/DB-Repo/tree/main/Account%20management)
--  [video](https://youtu.be/mKoaRB1p6Jg)
+-  [video](https://youtu.be/mKoaRB1p6Jg"CRUDandsqljoin")
