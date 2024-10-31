@@ -29,3 +29,17 @@ CREATE TABLE Loan (
     FOREIGN KEY (ReaderID) REFERENCES Reader(ReaderID),
     FOREIGN KEY (BookID) REFERENCES Book(BookID)
 );
+
+
+-- join語法
+SELECT 
+    Reader.Name AS ReaderName, 
+    Book.Title AS BookTitle, 
+    Loan.LoanDate, 
+    Loan.ReturnDate
+FROM 
+    Loan
+INNER JOIN 
+    Reader ON Loan.ReaderID = Reader.ReaderID
+INNER JOIN 
+    Book ON Loan.BookID = Book.BookID;

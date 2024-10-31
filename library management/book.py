@@ -7,7 +7,7 @@ app = Flask(__name__)
 # 設定資料庫連接
 db_config = {
     'user': 'root',
-    'password': '294784r3e2w1q',
+    'password': '',
     'host': 'localhost',
     'database': 'library'
 }

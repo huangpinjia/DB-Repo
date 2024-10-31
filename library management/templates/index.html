@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management - Reader Management</title>
+    <style>
+        /* 樣式設定 */
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
 </head>
 <body>
     <h1>Reader Management</h1>
@@ -38,8 +53,10 @@
             <td>
                     <button type="submit">Update</button>
                 </form>
+                <!-- 刪除按鈕 -->
                 <form action="{{ url_for('delete_reader', reader_id=reader.ReaderID) }}" method="GET" style="display:inline;">
                     <button type="submit">Delete</button>
+                </form>
             </td>
         </tr>
         {% endfor %}
