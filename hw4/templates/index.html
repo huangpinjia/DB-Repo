@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+</head>
+<body>
+    <h1>Employee Management</h1>
+
+    <!-- Create Employee Form -->
+    <h2>Add New Employee</h2>
+    <form action="/create" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="position" placeholder="Position" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="text" name="department" placeholder="Department" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <!-- Employee List -->
+    <h2>Employees</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.position }}</td>
+                <td>{{ employee.age }}</td>
+                <td>{{ employee.department }}</td>
+                <td>
+                    <!-- Update Form -->
+                    <form action="/update/{{ employee._id }}" method="POST" style="display:inline;">
+                        <input type="text" name="name" value="{{ employee.name }}" required>
+                        <input type="text" name="position" value="{{ employee.position }}" required>
+                        <input type="number" name="age" value="{{ employee.age }}" required>
+                        <input type="text" name="department" value="{{ employee.department }}" required>
+                        <button type="submit">Update</button>
+                    </form>
+                    
+                    <!-- Delete Form -->
+                    <form action="/delete/{{ employee._id }}" method="POST" style="display:inline;">
+                        <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
