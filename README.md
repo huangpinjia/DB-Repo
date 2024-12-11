@@ -17,4 +17,6 @@
 ### HW3：
 - [Code](https://github.com/huangpinjia/DB-Repo/tree/main/Human%20resources%20management)
 - [vedio](https://youtu.be/XMOhyvVc7lA)
-  
+### HW4：
+- [Code](https://github.com/huangpinjia/DB-Repo/tree/main/hw4)
+- [Video](https://youtu.be/KeL7p8xNUbs)
