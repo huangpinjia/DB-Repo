@@ -7,16 +7,17 @@
 ##### 系所：科技應用與人力資源系
 
 ## 成果(作業)區
-### HW1：
+### MySQL_Account management(HW1)：
 -  [Code](https://github.com/huangpinjia/DB-Repo/tree/main/Account%20management) 
 -  [video](https://youtu.be/rnTgi4VpvG8"前後端連結測試")
-### HW2：
--  [Code](https://github.com/huangpinjia/DB-Repo/tree/main/Account%20management)
+### MySQL_Library management_CRUD(HW2)：
+-  [Code](https://github.com/huangpinjia/DB-Repo/tree/main/library%20management)
 -  [video](https://youtu.be/mKoaRB1p6Jg"CRUDandsqljoin")
 -  [ER model](https://github.com/huangpinjia/DB-Repo/blob/main/library%20management/ER%20model_page-0001.jpg)
-### HW3：
+  
+### NoSQL_Human resources management(HW3)：
 - [Code](https://github.com/huangpinjia/DB-Repo/tree/main/Human%20resources%20management)
 - [vedio](https://youtu.be/XMOhyvVc7lA)
-### HW4：
+### NoSQL-CRUD_Employee Management(HW4)：
 - [Code](https://github.com/huangpinjia/DB-Repo/tree/main/hw4)
 - [Video](https://youtu.be/KeL7p8xNUbs)
