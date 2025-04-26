@@ -23,4 +23,4 @@
 - 📽️[Video](https://youtu.be/KeL7p8xNUbs)
 
 ## 最終團隊成果展示
-- [🔗Link](https://github.com/Database-System-Final-Project/Wonder-Fur.git) 
+- 🔗[Link](https://github.com/Database-System-Final-Project/Wonder-Fur.git) 
